@@ -21,6 +21,7 @@ class Ci < Formula
 
   def install
     bin.install 'bin/ci'
+    lib.install Dir.glob('lib/*')
   end
 
 end
