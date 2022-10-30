@@ -25,7 +25,13 @@ class ChromedriverInstall < Formula
 
   def install
     bin.install 'bin/chromedriver-install'
-    lib.install Dir['lib/**/*']
+    lib.install 'lib/Module/alias_methods.rb'
+    lib.install 'lib/Ordinal/Array.rb'
+    lib.install 'lib/Ordinal.rb'
+    lib.install 'lib/String/matches.rb'
+    lib.install 'lib/Thoran/Module/AliasMethods/alias_methods.rb'
+    lib.install 'lib/Thoran/String/Capture/capture.rb'
+    lib.install 'lib/Version.rb'
   end
 
 end
