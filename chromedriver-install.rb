@@ -2,7 +2,7 @@ class ChromedriverInstall < Formula
 
   desc "Automatic selection and installation of the right chromedriver for your version of Chrome."
   homepage 'https://github.com/thoran/chromedriver-install'
-  version '0.2.0'
+  version '0.3.1'
 
   url 'https://github.com/thoran/chromedriver-install.git'
 
