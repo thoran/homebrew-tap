@@ -11,7 +11,7 @@ class Skyhooks < Formula
   def install
     bin.install 'bin/skyhooks'
     lib.install 'lib/Array/match.rb'
-    lib.install 'lib/File/self.gsubX.rb'
+    # lib.install 'lib/File/self.gsubX.rb'
     lib.install 'lib/Thoran/Array/Match/match.rb'
     lib.install 'lib/Thoran/File/SelfGsubX/self.gsubX.rb'
   end
