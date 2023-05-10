@@ -1,6 +1,6 @@
 class Ci < Formula
 
-  desc 'Open ci from the cli.'
+  desc "Open ci from the cli."
   homepage 'https://github.com/thoran/ci'
   version '0.2.0'
 

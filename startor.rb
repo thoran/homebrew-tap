@@ -1,6 +1,6 @@
 class Startor < Formula
 
-  desc 'Easily install, start, and stop tor.'
+  desc "Easily install, start, and stop tor."
   homepage 'https://github.com/thoran/startor'
   version '0.6.4'
 
