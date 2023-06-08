@@ -2,7 +2,7 @@ class Jira < Formula
 
   desc "Easily open an issue on Atlassian's Jira issue tracker from the CLI."
   homepage 'https://github.com/thoran/jira'
-  version '0.3.0'
+  version '0.4.0'
 
   url 'https://github.com/thoran/jira.git'
 
