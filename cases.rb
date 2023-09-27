@@ -2,7 +2,7 @@ class Cases < Formula
 
   desc "Show a list of the different cases used when coding."
   homepage 'https://github.com/thoran/cases'
-  version '0.0.1'
+  version '0.1.0'
 
   url 'https://github.com/thoran/cases.git'
 
