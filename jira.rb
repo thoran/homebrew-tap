@@ -15,7 +15,6 @@ class Jira < Formula
 
   def install
     bin.install 'bin/jira'
-    lib.install Dir['lib/**/*']
   end
 
 end
