@@ -20,7 +20,7 @@ class Whale < Formula
 
   def install
     bin.install 'bin/whale'
-    lib.install Dir['lib/**/*']
+    FileUtils.cp_r("#{pwd}/lib", lib)
   end
 
 end
