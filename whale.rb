@@ -2,7 +2,7 @@ class Whale < Formula
 
   desc "Sometimes when they go fishing, they get a whale and it sinks their boat."
   homepage 'https://github.com/thoran/whale'
-  version '0.8.0'
+  version '0.8.1'
 
   url 'https://github.com/thoran/whale.git'
 
