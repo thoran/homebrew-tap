@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# install-thorans-homebrew-fomulae
+
+# 20240317
+# 0.0.0
+
+# Description: Install all formulae in thoran/tap.
+
+require 'json'
+
+def formulae
+  JSON.parse(`brew tap-info thoran/homebrew-tap --json`)[0]['formula_names']
+end
+
+def main
+	system('brew tap thoran/tap')
+	formulae.each do |formula|
+    puts '', "brew install #{formula}", ''
+    system("brew install #{formula}")
+	end
+end
+
+main
