@@ -2,7 +2,7 @@ class GitMessages < Formula
 
   desc "Show the list of conventional commit types."
   homepage 'https://github.com/thoran/git-messages'
-  version '0.0.0'
+  version '0.2.0'
 
   url 'https://github.com/thoran/git-messages.git'
 
