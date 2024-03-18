@@ -2,7 +2,7 @@ class GitCheckoutNewIssue < Formula
 
   desc "Create a new branch at the same time as creating a new issue. Only works with Jira for now."
   homepage 'https://github.com/thoran/git-checkout-new-issue'
-  version '0.1.0'
+  version '0.2.0'
 
   url 'https://github.com/thoran/git-checkout-new-issue.git'
 
