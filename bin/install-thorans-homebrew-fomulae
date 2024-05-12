@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # install-thorans-homebrew-fomulae
 
-# 20240317
-# 0.0.0
+# 20240512
+# 0.0.1
 
 # Description: Install all formulae in thoran/tap.
 
@@ -13,11 +13,11 @@ def formulae
 end
 
 def main
-	system('brew tap thoran/tap')
-	formulae.each do |formula|
+  system('brew tap thoran/tap')
+  formulae.each do |formula|
     puts '', "brew install #{formula}", ''
     system("brew install #{formula}")
-	end
+  end
 end
 
 main
