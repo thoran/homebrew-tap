@@ -1,10 +1,10 @@
-class Whale < Formula
+class Moby < Formula
 
   desc "Sometimes when they go fishing, they get a whale and it sinks their boat."
-  homepage 'https://github.com/thoran/whale'
-  version '0.8.1'
+  homepage 'https://github.com/thoran/moby'
+  version '0.9.0'
 
-  url 'https://github.com/thoran/whale.git'
+  url 'https://github.com/thoran/moby.git'
 
   depends_on 'ruby'
 
@@ -19,7 +19,7 @@ class Whale < Formula
   end
 
   def install
-    bin.install 'bin/whale'
+    bin.install 'bin/moby'
     FileUtils.cp_r("#{pwd}/lib", lib)
   end
 

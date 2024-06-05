@@ -32,10 +32,10 @@ $ brew install git-boot
 $ brew install git-checkout-new-issue
 $ brew install git-messages
 $ brew install jira
+$ brew install moby
 $ brew install should2expect
 $ brew install skyhooks
 $ brew install startor
-$ brew install whale
 ```
 
 ### 2. Or, install everything at once
@@ -56,10 +56,10 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [git-checkout-new-issue](https://github.com/thoran/git-checkout-new-issue),
 [git-messages](https://github.com/thoran/git-messages),
 [jira](https://github.com/thoran/jira),
+[moby](https://github.com/thoran/moby),
 [should2expect](https://github.com/thoran/should2expect),
 [skyhooks](https://github.com/thoran/skyhooks),
-[startor](https://github.com/thoran/startor),
-[whale](https://github.com/thoran/whale)
+[startor](https://github.com/thoran/startor)
 
 ## Contributing
 
