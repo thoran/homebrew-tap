@@ -26,6 +26,7 @@ $ brew install cases
 $ brew install chromedriver-install
 $ brew install ci
 $ brew install dehashrocketify
+$ brew install exitor
 $ brew install gem-homepage
 $ brew install git-autobisect
 $ brew install git-boot
@@ -50,6 +51,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [chromedriver-install](https://github.com/thoran/chromedriver-install),
 [ci](https://github.com/thoran/ci),
 [dehashrocketify](https://github.com/thoran/dehashrocketify),
+[exitor](https://github.com/thoran/exitor),
 [gem-homepage](https://github.com/thoran/gem-homepage),
 [git-autobisect](https://github.com/thoran/git-autobisect),
 [git-boot](https://github.com/thoran/git-boot),
