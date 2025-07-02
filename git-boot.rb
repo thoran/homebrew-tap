@@ -1,8 +1,7 @@
 class GitBoot < Formula
-
   desc "Create local and remote git repos with a single command."
   homepage 'https://github.com/thoran/git-boot'
-  version '0.8.4'
+  version '0.9.0'
 
   url 'https://github.com/thoran/git-boot.git'
 
@@ -33,8 +32,13 @@ class GitBoot < Formula
     sha256 '72a85f512a0e46d8316f4f606050731013c38e69e97544d7b7ce28f21aa122c0'
   end
 
-  def install
-    bin.install 'bin/git-boot'
+  resource 'sym' do
+    url 'https://rubygems.org/downloads/sym-3.0.2.gem'
+    sha256 '1c4bfbab59297f75dcb85df1b9d389b41e73bf69903831718da0504313ff5231'
   end
 
+  def install
+    bin.install 'bin/git-boot'
+    # lib.install Dir['lib/**/*']
+  end
 end
