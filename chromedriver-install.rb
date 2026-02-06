@@ -2,7 +2,7 @@ class ChromedriverInstall < Formula
 
   desc "Automatic selection and installation of the right chromedriver for your version of Chrome."
   homepage 'https://github.com/thoran/chromedriver-install'
-  version '0.5.0'
+  version '0.5.1'
 
   url 'https://github.com/thoran/chromedriver-install.git'
 
@@ -19,8 +19,8 @@ class ChromedriverInstall < Formula
   end
 
   resource 'rubyzip' do
-    url 'https://rubygems.org/downloads/rubyzip-2.3.2.gem'
-    sha256 '3f57e3935dc2255c414484fbf8d673b4909d8a6a57007ed754dde39342d2373f'
+    url 'https://rubygems.org/downloads/rubyzip-3.2.2.gem'
+    sha256 'c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c'
   end
 
   def install
