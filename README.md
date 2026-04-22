@@ -38,6 +38,7 @@ $ brew install moby
 $ brew install should2expect
 $ brew install skyhooks
 $ brew install startor
+$ brew install weblink
 ```
 
 ### 2. Or, install everything at once
@@ -63,7 +64,8 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [moby](https://github.com/thoran/moby),
 [should2expect](https://github.com/thoran/should2expect),
 [skyhooks](https://github.com/thoran/skyhooks),
-[startor](https://github.com/thoran/startor)
+[startor](https://github.com/thoran/startor),
+[weblink](https://github.com/thoran/weblink)
 
 ## Contributing
 
