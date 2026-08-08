@@ -1,15 +1,20 @@
 class GitBoot < Formula
   desc "Create local and remote git repos with a single command."
   homepage 'https://github.com/thoran/git-boot'
-  version '0.9.0'
+  version '0.14.4'
 
   url 'https://github.com/thoran/git-boot.git'
 
   depends_on 'ruby'
 
+  resource 'faraday-retry' do
+    url 'https://rubygems.org/downloads/faraday-retry-2.4.0.gem'
+    sha256 '7b79c48fb7e56526faf247b12d94a680071ff40c9fda7cf1ec1549439ad11ebe'
+  end
+
   resource 'impuri' do
-    url "https://rubygems.org/downloads/impuri-0.8.0.gem"
-    sha256 "88ac2c67dfd2ecd222236e0f4bb8104c6b2b27607d8e42deb65b12b85e7a77f3"
+    url 'https://rubygems.org/downloads/impuri-0.12.0.gem'
+    sha256 'c4212aeb0fec02d26c010a02f985bdd6a179d4c80c4c81e9f85ae7d728fa538b'
   end
 
   resource 'net-ssh' do
@@ -39,6 +44,6 @@ class GitBoot < Formula
 
   def install
     bin.install 'bin/git-boot'
-    # lib.install Dir['lib/**/*']
+    lib.install Dir['lib/*']
   end
 end
