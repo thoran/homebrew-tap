@@ -2,7 +2,7 @@ class Dehashrocketify < Formula
 
   desc "Hashrockets be gone!"
   homepage 'https://github.com/thoran/dehashrocketify'
-  version '0.11.1'
+  version '0.12.0'
 
   url 'https://github.com/thoran/dehashrocketify.git'
 
