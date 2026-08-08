@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+# uninstall-thorans-homebrew-formulae
+
+# 20260723
+# 0.0.0
+
+# Description: Uninstall all formulae in thoran/tap.
+
+require 'json'
+
+def formulae
+  @formulae ||= JSON.parse(`brew tap-info thoran/homebrew-tap --json`)[0]['formula_names']
+end
+
+def installed_formulae
+  @installed_formulae ||= `brew list --formula -1`.split("\n")
+end
+
+def installed?(formula)
+  installed_formulae.include?(File.basename(formula))
+end
+
+def uninstall(formula)
+  puts '', "brew uninstall #{formula}", ''
+  system("brew uninstall #{formula}")
+end
+
+def main
+  formulae.each do |formula|
+    if installed?(formula)
+      uninstall(formula)
+    else
+      puts "#{formula} is not installed; skipping."
+    end
+  end
+end
+
+main
