@@ -23,6 +23,7 @@ $ brew tap thoran/tap
 
 ```shell
 $ brew install cases
+$ brew install changelogger
 $ brew install chromedriver-install
 $ brew install ci
 $ brew install dehashrocketify
@@ -51,6 +52,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 ## Sources
 
 [cases](https://github.com/thoran/cases), 
+[changelogger](https://github.com/thoran/changelogger),
 [chromedriver-install](https://github.com/thoran/chromedriver-install),
 [ci](https://github.com/thoran/ci),
 [dehashrocketify](https://github.com/thoran/dehashrocketify),
