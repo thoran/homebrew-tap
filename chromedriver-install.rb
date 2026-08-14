@@ -2,11 +2,12 @@ class ChromedriverInstall < Formula
 
   desc "Automatic selection and installation of the right chromedriver for your version of Chrome."
   homepage 'https://github.com/thoran/chromedriver-install'
-  version '0.5.1'
+  version '0.6.0'
 
   url 'https://github.com/thoran/chromedriver-install.git'
 
   depends_on 'ruby'
+  depends_on 'xz' => :build
 
   resource 'http.rb' do
     url 'https://rubygems.org/downloads/http.rb-0.12.0.gem'
@@ -24,14 +25,26 @@ class ChromedriverInstall < Formula
   end
 
   def install
-    bin.install 'bin/chromedriver-install'
-    lib.install 'lib/Module/alias_methods.rb'
-    lib.install 'lib/Ordinal/Array.rb'
-    lib.install 'lib/Ordinal.rb'
-    lib.install 'lib/String/matches.rb'
-    lib.install 'lib/Thoran/Module/AliasMethods/alias_methods.rb'
-    lib.install 'lib/Thoran/String/Capture/capture.rb'
-    lib.install 'lib/Version.rb'
+    ENV['GEM_HOME'] = (libexec/'vendor').to_s
+    ENV['GEM_PATH'] = (libexec/'vendor').to_s
+    resources.each do |r|
+      r.fetch
+      system 'gem', 'install', r.cached_download, '--no-document', '--install-dir', libexec/'vendor'
+    end
+    libexec.install 'bin', 'lib'
+
+    # The gems are built by the ruby this depends on, and the script's
+    # /usr/bin/env ruby would otherwise find whichever ruby comes first on the
+    # user's PATH.  nokogiri's extension is built for one and will not load in
+    # the other, so the wrapper names the ruby the gems were built against.
+
+    (bin/'chromedriver-install').write_env_script(
+      libexec/'bin/chromedriver-install',
+      PATH: "#{Formula['ruby'].opt_bin}:$PATH",
+      GEM_HOME: libexec/'vendor',
+      GEM_PATH: libexec/'vendor',
+      RUBYLIB: libexec/'lib',
+    )
   end
 
 end
