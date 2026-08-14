@@ -2,11 +2,16 @@ class GitAutobisect < Formula
 
   desc "Automate git bisect."
   homepage 'https://github.com/thoran/git-bisect'
-  version '0.3.2'
+  version '0.4.0'
 
   url 'https://github.com/thoran/git-autobisect.git'
 
   depends_on 'ruby'
+
+  resource 'ostruct' do
+    url 'https://rubygems.org/downloads/ostruct-0.6.3.gem'
+    sha256 '95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912'
+  end
 
   resource 'switches.rb' do
     url 'https://rubygems.org/downloads/switches.rb-0.9.15.gem'
@@ -14,7 +19,27 @@ class GitAutobisect < Formula
   end
 
   def install
-    bin.install 'bin/git-autobisect'
+    ENV['GEM_HOME'] = (libexec/'vendor').to_s
+    ENV['GEM_PATH'] = (libexec/'vendor').to_s
+    resources.each do |r|
+      r.fetch
+      system 'gem', 'install', r.cached_download, '--no-document', '--install-dir', libexec/'vendor'
+    end
+    libexec.install 'bin'
+
+    # The gems are built by the ruby this depends on, and the script's
+    # /usr/bin/env ruby would otherwise find whichever ruby comes first on the
+    # user's PATH.  A gem with a compiled extension is built for one and will
+    # not load in the other, so the wrapper names the ruby the gems were built
+    # against.  switches.rb and ostruct are pure Ruby and would load either way;
+    # this is here so that they still do the day one of them is not.
+
+    (bin/'git-autobisect').write_env_script(
+      libexec/'bin/git-autobisect',
+      PATH: "#{Formula['ruby'].opt_bin}:$PATH",
+      GEM_HOME: libexec/'vendor',
+      GEM_PATH: libexec/'vendor',
+    )
   end
 
 end
