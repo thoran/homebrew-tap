@@ -1,7 +1,7 @@
 class GitBoot < Formula
   desc "Create local and remote git repos with a single command."
   homepage 'https://github.com/thoran/git-boot'
-  version '0.15.0'
+  version '0.16.0'
 
   url 'https://github.com/thoran/git-boot.git'
 
@@ -189,7 +189,7 @@ class GitBoot < Formula
     system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
       *resources.map{|r| r.fetch.to_s}
 
-    libexec.install 'bin', 'lib'
+    libexec.install 'bin', 'lib', 'templates'
 
     # RUBYLIB reaches the vendored lib, which the forty-four files of it were
     # previously installed into the shared prefix to satisfy, where they
