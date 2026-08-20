@@ -8,13 +8,18 @@ class Moby < Formula
   depends_on 'ruby'
 
   resource 'switches.rb' do
-    url 'https://rubygems.org/downloads/switches.rb-0.9.15.gem'
-    sha256 '72a85f512a0e46d8316f4f606050731013c38e69e97544d7b7ce28f21aa122c0'
+    url 'https://rubygems.org/downloads/switches.rb-0.13.0.gem'
+    sha256 'a09c89ade14fba2a485b03c725a28636f6350b8d68032dca4abd447d33d6e210'
   end
 
   resource 'mechanize' do
     url 'https://rubygems.org/downloads/mechanize-2.9.1.gem'
     sha256 '1f2026cd90395a95002fa1653c13120bf7228facda970a011e19c5c7f1a08c22'
+  end
+
+  resource 'selenium-webdriver' do
+    url 'https://rubygems.org/downloads/selenium-webdriver-4.47.0.gem'
+    sha256 '67f915b8223d2133bbaa13e92fd98854175394f086e2036a9eff4f5561fd69e4'
   end
 
   # The whole tree into libexec, bin and lib staying siblings there so that
@@ -25,11 +30,12 @@ class Moby < Formula
   # namespace.
 
   # GEM_HOME and GEM_PATH are deliberately not set, and neither is PATH.  The
-  # two resources below are declared and never installed, so moby resolves
-  # switches.rb and mechanize from whichever gem home the invoking ruby has;
-  # pointing GEM_HOME at an empty libexec/vendor, or PATH at a ruby without
-  # those gems, would each turn a working install into a broken one.  Vendoring
-  # them is the rest of this job and wants mechanize's closure resolved first.
+  # three resources above are declared and never installed, so moby resolves
+  # switches.rb, mechanize and selenium-webdriver from whichever gem home the
+  # invoking ruby has; pointing GEM_HOME at an empty libexec/vendor, or PATH at
+  # a ruby without those gems, would each turn a working install into a broken
+  # one.  Vendoring them is the rest of this job and wants mechanize's closure
+  # resolved first.
 
   def install
     libexec.install 'bin', 'lib'
