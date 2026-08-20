@@ -28,8 +28,8 @@ class Mercurial < Formula
   end
 
   resource 'switches.rb' do
-    url 'https://rubygems.org/downloads/switches.rb-0.10.3.gem'
-    sha256 '2e0a8f74d28ef8f7ba21845f5eaefcde50ae32f924e36ae4493583d3ffaf9b1d'
+    url 'https://rubygems.org/downloads/switches.rb-0.13.0.gem'
+    sha256 'a09c89ade14fba2a485b03c725a28636f6350b8d68032dca4abd447d33d6e210'
   end
 
   resource 'sys-proctable' do
