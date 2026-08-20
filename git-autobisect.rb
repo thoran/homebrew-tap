@@ -1,8 +1,8 @@
 class GitAutobisect < Formula
 
   desc "Automate git bisect."
-  homepage 'https://github.com/thoran/git-bisect'
-  version '0.4.0'
+  homepage 'https://github.com/thoran/git-autobisect'
+  version '0.4.1'
 
   url 'https://github.com/thoran/git-autobisect.git'
 
