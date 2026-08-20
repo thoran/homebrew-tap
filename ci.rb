@@ -21,10 +21,10 @@ class Ci < Formula
   def install
     ENV['GEM_HOME'] = (libexec/'vendor').to_s
     ENV['GEM_PATH'] = (libexec/'vendor').to_s
-    resources.each do |r|
-      r.fetch
-      system 'gem', 'install', r.cached_download, '--no-document', '--install-dir', libexec/'vendor'
-    end
+    resources.each(&:fetch)
+
+    system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
+      *resources.map{|r| r.cached_download.to_s}
     libexec.install 'bin'
 
     # The gems are built by the ruby this depends on, and the script's

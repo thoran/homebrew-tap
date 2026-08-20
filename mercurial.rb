@@ -44,8 +44,10 @@ class Mercurial < Formula
     # Installed in one call rather than one apiece, so that sys-proctable's
     # dependency upon ffi is satisfied from here and nothing is fetched.
 
+    resources.each(&:fetch)
+
     system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
-      *resources.map{|r| r.fetch.to_s}
+      *resources.map{|r| r.cached_download.to_s}
 
     # The whole tree, structure intact.  The eighteen lib.install lines this
     # replaces flattened every namespaced path — lib/MacOS/IfConfig.rb landed as
