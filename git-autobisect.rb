@@ -14,8 +14,8 @@ class GitAutobisect < Formula
   end
 
   resource 'switches.rb' do
-    url 'https://rubygems.org/downloads/switches.rb-0.9.15.gem'
-    sha256 '72a85f512a0e46d8316f4f606050731013c38e69e97544d7b7ce28f21aa122c0'
+    url 'https://rubygems.org/downloads/switches.rb-0.10.3.gem'
+    sha256 '2e0a8f74d28ef8f7ba21845f5eaefcde50ae32f924e36ae4493583d3ffaf9b1d'
   end
 
   def install
