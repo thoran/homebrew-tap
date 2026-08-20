@@ -1,8 +1,8 @@
 class Should2expect < Formula
 
   desc "Automatically convert Rspec should-style to expect-style expectations."
-  homepage 'https://github.com/thoran/dehashrocketify'
-  version '0.15.0'
+  homepage 'https://github.com/thoran/should2expect'
+  version '0.15.1'
 
   url 'https://github.com/thoran/should2expect.git'
 
