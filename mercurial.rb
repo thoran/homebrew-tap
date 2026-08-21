@@ -1,7 +1,7 @@
 class Mercurial < Formula
   desc "Wireguard server switcher."
   homepage 'https://github.com/thoran/mercurial'
-  version '0.12.1'
+  version '0.13.0'
 
   url 'https://github.com/thoran/mercurial.git'
 
