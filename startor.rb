@@ -1,7 +1,7 @@
 class Startor < Formula
   desc "Easily install, start, and stop tor."
   homepage 'https://github.com/thoran/startor'
-  version '0.9.2'
+  version '0.10.0'
 
   url 'https://github.com/thoran/startor.git'
 
