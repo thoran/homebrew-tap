@@ -14,8 +14,8 @@ class Ci < Formula
   end
 
   resource 'impuri' do
-    url 'https://rubygems.org/downloads/impuri-0.12.0.gem'
-    sha256 'c4212aeb0fec02d26c010a02f985bdd6a179d4c80c4c81e9f85ae7d728fa538b'
+    url 'https://rubygems.org/downloads/impuri-0.12.5.gem'
+    sha256 '28e09287192fda3f3e91f827191a6a8571db502f06b444470a2aca5e4133528f'
   end
 
   def install
