@@ -3,6 +3,7 @@ class Dehashrocketify < Formula
   desc "Hashrockets be gone!"
   homepage 'https://github.com/thoran/dehashrocketify'
   version '0.13.1'
+  license 'MIT'
 
   url 'https://github.com/thoran/dehashrocketify.git'
 

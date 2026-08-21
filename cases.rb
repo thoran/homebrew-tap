@@ -3,6 +3,7 @@ class Cases < Formula
   desc "Show a list of the different cases used when coding."
   homepage 'https://github.com/thoran/cases'
   version '0.3.2'
+  license 'MIT'
 
   url 'https://github.com/thoran/cases.git'
 

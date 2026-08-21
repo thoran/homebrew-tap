@@ -3,6 +3,7 @@ class Ci < Formula
   desc "Open ci from the cli."
   homepage 'https://github.com/thoran/ci'
   version '0.5.2'
+  license 'MIT'
 
   url 'https://github.com/thoran/ci.git'
 

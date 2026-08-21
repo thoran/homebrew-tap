@@ -2,6 +2,7 @@ class Moby < Formula
   desc "Sometimes when they go fishing, they get a whale and it sinks their boat."
   homepage 'https://github.com/thoran/moby'
   version '2.1.5'
+  license 'MIT'
 
   url 'https://github.com/thoran/moby.git'
 

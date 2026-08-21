@@ -3,6 +3,7 @@ class GitAutobisect < Formula
   desc "Automate git bisect."
   homepage 'https://github.com/thoran/git-autobisect'
   version '0.5.1'
+  license 'MIT'
 
   url 'https://github.com/thoran/git-autobisect.git'
 
