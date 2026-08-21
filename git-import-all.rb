@@ -1,8 +1,7 @@
 class GitImportAll < Formula
-
   desc "Turn a directory of numbered revisions into a git repository, one commit per revision."
   homepage 'https://github.com/thoran/git-import-all'
-  version '0.13.1'
+  version '0.14.0'
 
   url 'https://github.com/thoran/git-import-all.git'
 
@@ -35,5 +34,4 @@ class GitImportAll < Formula
       RUBYLIB: libexec/'lib',
     )
   end
-
 end
