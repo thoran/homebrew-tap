@@ -2,7 +2,7 @@ class GemHomepage < Formula
 
   desc "Open a gem's homepage from the command line."
   homepage 'https://github.com/thoran/gem-homepage'
-  version '0.3.1'
+  version '0.3.2'
   license 'MIT'
 
   url 'https://github.com/thoran/gem-homepage.git'
