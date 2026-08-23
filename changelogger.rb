@@ -1,7 +1,7 @@
 class Changelogger < Formula
   desc "Given a directory of numbered revisions, write a cumulative CHANGELOG into each of them."
   homepage 'https://github.com/thoran/changelogger'
-  version '0.13.0'
+  version '0.14.0'
   license 'MIT'
 
   url 'https://github.com/thoran/changelogger.git'
