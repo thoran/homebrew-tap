@@ -1,7 +1,7 @@
 class ChromedriverInstall < Formula
   desc "Automatic selection and installation of the right chromedriver for your version of Chrome."
   homepage 'https://github.com/thoran/chromedriver-install'
-  version '0.7.2'
+  version '0.7.3'
   license 'MIT'
 
   url 'https://github.com/thoran/chromedriver-install.git'
