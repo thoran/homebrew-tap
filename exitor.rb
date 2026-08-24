@@ -26,8 +26,8 @@ class Exitor < Formula
   end
 
   resource 'http.rb' do
-    url 'https://rubygems.org/downloads/http.rb-0.12.0.gem'
-    sha256 '84862ca6ca8eb891ac87c8a07b43a85e700a3ed2141167f7473a1c8af078b145'
+    url 'https://rubygems.org/downloads/http.rb-1.3.2.gem'
+    sha256 '33b8ecc2c5ff03af1a67f3ccce272c7945af376d7921f465321d435bec924c35'
   end
 
   resource 'sys-proctable' do
