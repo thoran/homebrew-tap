@@ -1,6 +1,6 @@
 class TapAudit < Formula
   desc "Report what each formula in a Homebrew tap has drifted from."
-  version '0.13.0'
+  version '0.14.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/tap-audit'
