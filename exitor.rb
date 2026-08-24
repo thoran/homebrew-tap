@@ -1,7 +1,7 @@
 class Exitor < Formula
   desc "Easily change tor exit node country."
   homepage 'https://github.com/thoran/exitor'
-  version '0.5.1'
+  version '0.5.2'
   license 'MIT'
 
   url 'https://github.com/thoran/exitor.git'
