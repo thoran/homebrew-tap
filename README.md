@@ -41,6 +41,7 @@ $ brew install moby
 $ brew install should2expect
 $ brew install skyhooks
 $ brew install startor
+$ brew install tap-audit
 $ brew install weblink
 ```
 
@@ -71,6 +72,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [should2expect](https://github.com/thoran/should2expect),
 [skyhooks](https://github.com/thoran/skyhooks),
 [startor](https://github.com/thoran/startor),
+[tap-audit](https://github.com/thoran/tap-audit),
 [weblink](https://github.com/thoran/weblink)
 
 ## Contributing
