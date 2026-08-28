@@ -1,7 +1,7 @@
 class Namo < Formula
   desc "Named dimensional data for Ruby."
   homepage 'https://github.com/thoran/namo'
-  version '0.32.0'
+  version '0.32.4'
   license 'MIT'
 
   url 'https://github.com/thoran/namo.git'
