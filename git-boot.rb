@@ -1,7 +1,7 @@
 class GitBoot < Formula
   desc "Create local and remote git repos with a single command."
   homepage 'https://github.com/thoran/git-boot'
-  version '0.16.4'
+  version '0.16.5'
   license 'MIT'
 
   url 'https://github.com/thoran/git-boot.git'
