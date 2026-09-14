@@ -39,6 +39,7 @@ $ brew install jira
 $ brew install mercurial
 $ brew install moby
 $ brew install namo
+$ brew install release-audit
 $ brew install should2expect
 $ brew install skyhooks
 $ brew install startor
@@ -71,6 +72,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [mercurial](https://github.com/thoran/mercurial),
 [moby](https://github.com/thoran/moby),
 [namo](https://github.com/thoran/namo),
+[release-audit](https://github.com/thoran/release-audit),
 [should2expect](https://github.com/thoran/should2expect),
 [skyhooks](https://github.com/thoran/skyhooks),
 [startor](https://github.com/thoran/startor),
