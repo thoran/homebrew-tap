@@ -1,6 +1,6 @@
 class ReleaseAudit < Formula
   desc "Report which repositories beneath a root have a release left half done."
-  version '0.4.0'
+  version '0.5.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/release-audit'
