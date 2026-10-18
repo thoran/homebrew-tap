@@ -33,6 +33,7 @@ $ brew install gem-publish
 $ brew install git-autobisect
 $ brew install git-boot
 $ brew install git-checkout-new-issue
+$ brew install git-ff-merge-pr
 $ brew install git-import-all
 $ brew install git-messages
 $ brew install jira
@@ -66,6 +67,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [git-autobisect](https://github.com/thoran/git-autobisect),
 [git-boot](https://github.com/thoran/git-boot),
 [git-checkout-new-issue](https://github.com/thoran/git-checkout-new-issue),
+[git-ff-merge-pr](https://github.com/thoran/git-ff-merge-pr),
 [git-import-all](https://github.com/thoran/git-import-all),
 [git-messages](https://github.com/thoran/git-messages),
 [jira](https://github.com/thoran/jira),
