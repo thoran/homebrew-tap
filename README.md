@@ -36,6 +36,7 @@ $ brew install git-checkout-new-issue
 $ brew install git-ff-merge-pr
 $ brew install git-import-all
 $ brew install git-messages
+$ brew install git-sync-fork
 $ brew install jira
 $ brew install mercurial
 $ brew install moby
@@ -70,6 +71,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [git-ff-merge-pr](https://github.com/thoran/git-ff-merge-pr),
 [git-import-all](https://github.com/thoran/git-import-all),
 [git-messages](https://github.com/thoran/git-messages),
+[git-sync-fork](https://github.com/thoran/git-sync-fork),
 [jira](https://github.com/thoran/jira),
 [mercurial](https://github.com/thoran/mercurial),
 [moby](https://github.com/thoran/moby),
