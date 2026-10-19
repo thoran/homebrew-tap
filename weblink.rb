@@ -42,8 +42,6 @@ class Weblink < Formula
     # Installed in one call rather than one apiece, so that switches.rb's
     # dependency upon ostruct is satisfied from here and nothing is fetched.
 
-    resources.each(&:fetch)
-
     system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
       *resources.map{|r| r.cached_download.to_s}
 

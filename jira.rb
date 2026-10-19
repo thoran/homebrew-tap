@@ -16,7 +16,6 @@ class Jira < Formula
   def install
     ENV['GEM_HOME'] = (libexec/'vendor').to_s
     ENV['GEM_PATH'] = (libexec/'vendor').to_s
-    resources.each(&:fetch)
 
     system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
       *resources.map{|r| r.cached_download.to_s}

@@ -88,8 +88,6 @@ class GitCheckoutNewIssue < Formula
     # Installed in one call rather than one apiece, so that each gem's
     # dependencies are satisfied from the others here and nothing is fetched.
 
-    resources.each(&:fetch)
-
     system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
       *resources.map{|r| r.cached_download.to_s}
     libexec.install 'bin'
