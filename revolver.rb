@@ -1,6 +1,6 @@
 class Revolver < Formula
   desc "Switch DNS resolvers at random."
-  version '0.12.1'
+  version '0.13.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/revolver'
