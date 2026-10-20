@@ -161,8 +161,8 @@ class GitBoot < Formula
   end
 
   resource 'switches.rb' do
-    url 'https://rubygems.org/downloads/switches.rb-0.13.0.gem'
-    sha256 'a09c89ade14fba2a485b03c725a28636f6350b8d68032dca4abd447d33d6e210'
+    url 'https://rubygems.org/downloads/switches.rb-0.14.0.gem'
+    sha256 'b6c0fa8c22277fd40c3070864040da75bc48086012d8db8b3fdc88a50c7f312a'
   end
 
   resource 'sym' do
