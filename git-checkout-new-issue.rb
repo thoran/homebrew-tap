@@ -85,11 +85,14 @@ class GitCheckoutNewIssue < Formula
     ENV['GEM_HOME'] = (libexec/'vendor').to_s
     ENV['GEM_PATH'] = (libexec/'vendor').to_s
 
-    # Installed in one call rather than one apiece, so that each gem's
-    # dependencies are satisfied from the others here and nothing is fetched.
+    # Installed with --local and --ignore-dependencies, the resources being the
+    # whole of what is needed.  gem install resolves a file's dependencies from
+    # what is already installed and from the remote, not from the other files
+    # it was given, so without these each dependency named later in the list
+    # than a gem needing it would be fetched, at whichever version is newest.
 
-    system 'gem', 'install', '--no-document', '--install-dir', libexec/'vendor',
-      *resources.map{|r| r.cached_download.to_s}
+    system 'gem', 'install', '--local', '--ignore-dependencies', '--no-document',
+      '--install-dir', libexec/'vendor', *resources.map{|r| r.cached_download.to_s}
     libexec.install 'bin'
 
     # The gems are built by the ruby this depends on, and the script's
