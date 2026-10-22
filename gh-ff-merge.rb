@@ -1,15 +1,15 @@
-class GitFfMergePr < Formula
-  desc "Merge a branch's open pull request by fast-forwarding its base branch and pushing it."
-  version '0.1.0'
+class GhFfMerge < Formula
+  desc "Merge a pull request by fast-forwarding its base branch and pushing it, as gh ff-merge."
+  version '0.2.0'
   license 'MIT'
 
-  homepage 'https://github.com/thoran/git-ff-merge-pr'
-  url 'https://github.com/thoran/git-ff-merge-pr.git'
+  homepage 'https://github.com/thoran/gh-ff-merge'
+  url 'https://github.com/thoran/gh-ff-merge.git'
 
   depends_on 'gh'
   depends_on 'ruby'
 
-  # git.rb and switches.rb are the gems bin/git-ff-merge-pr requires; ostruct is
+  # git.rb and switches.rb are the gems gh-ff-merge requires; ostruct is
   # switches.rb's own dependency and is named here so that nothing is fetched
   # during the build.  json is required too and is not here, being a default
   # gem: it ships with the ruby this depends upon rather than living in the gems
@@ -43,18 +43,22 @@ class GitFfMergePr < Formula
     system 'gem', 'install', '--local', '--ignore-dependencies', '--no-document',
       '--install-dir', libexec/'vendor', *resources.map{|r| r.cached_download.to_s}
 
-    libexec.install 'bin'
+    libexec.install 'gh-ff-merge'
 
     # GEM_HOME and GEM_PATH reach the vendored gems.  PATH names the ruby this
     # depends on, the script's /usr/bin/env ruby otherwise finding whichever
     # comes first on the user's PATH — which matters here beyond the usual, json
     # being a default gem of that ruby rather than something vendored.
 
-    (bin/'git-ff-merge-pr').write_env_script(
-      libexec/'bin/git-ff-merge-pr',
+    (bin/'gh-ff-merge').write_env_script(
+      libexec/'gh-ff-merge',
       PATH: "#{Formula['ruby'].opt_bin}:$PATH",
       GEM_HOME: libexec/'vendor',
       GEM_PATH: libexec/'vendor',
     )
+  end
+
+  test do
+    assert_match 'Usage: gh ff-merge', shell_output("#{bin}/gh-ff-merge -h")
   end
 end

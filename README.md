@@ -30,10 +30,10 @@ $ brew install dehashrocketify
 $ brew install exitor
 $ brew install gem-homepage
 $ brew install gem-publish
+$ brew install gh-ff-merge
 $ brew install git-autobisect
 $ brew install git-boot
 $ brew install git-checkout-new-issue
-$ brew install git-ff-merge-pr
 $ brew install git-import-all
 $ brew install git-messages
 $ brew install git-sync-fork
@@ -66,10 +66,10 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [exitor](https://github.com/thoran/exitor),
 [gem-homepage](https://github.com/thoran/gem-homepage),
 [gem-publish](https://github.com/thoran/gem-publish),
+[gh-ff-merge](https://github.com/thoran/gh-ff-merge),
 [git-autobisect](https://github.com/thoran/git-autobisect),
 [git-boot](https://github.com/thoran/git-boot),
 [git-checkout-new-issue](https://github.com/thoran/git-checkout-new-issue),
-[git-ff-merge-pr](https://github.com/thoran/git-ff-merge-pr),
 [git-import-all](https://github.com/thoran/git-import-all),
 [git-messages](https://github.com/thoran/git-messages),
 [git-sync-fork](https://github.com/thoran/git-sync-fork),
