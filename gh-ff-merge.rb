@@ -1,10 +1,10 @@
 class GhFfMerge < Formula
   desc "Merge a pull request by fast-forwarding its base branch and pushing it, as gh ff-merge."
-  version '0.2.0'
+  version '0.2.1'
   license 'MIT'
 
   homepage 'https://github.com/thoran/gh-ff-merge'
-  url 'https://github.com/thoran/gh-ff-merge.git'
+  url 'https://github.com/thoran/gh-ff-merge.git', tag: 'v0.2.1', revision: 'b72024878072f961576218d24442502b3caa754b'
 
   depends_on 'gh'
   depends_on 'ruby'
