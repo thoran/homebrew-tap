@@ -1,10 +1,10 @@
 class GitFfMerge < Formula
   desc "Merge a branch by fast-forwarding its base branch and pushing it, knowing nothing of any host."
-  version '0.0.0'
+  version '0.0.1'
   license 'MIT'
 
   homepage 'https://github.com/thoran/git-ff-merge'
-  url 'https://github.com/thoran/git-ff-merge.git'
+  url 'https://github.com/thoran/git-ff-merge.git', tag: 'v0.0.1', revision: '1ce9c56e2f4f01874e26c0a2eb58d34398d2ad37'
 
   depends_on 'ruby'
 
