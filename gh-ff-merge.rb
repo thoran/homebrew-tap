@@ -58,6 +58,17 @@ class GhFfMerge < Formula
     )
   end
 
+  # gh runs its extensions and aliases, not gh-<name> executables on PATH, so
+  # gh ff-merge wants an alias.  It is left to the user, it being a write to
+  # gh's config in the home directory, which brew's sandbox does not permit.
+
+  def caveats
+    <<~EOS
+      To run this as gh ff-merge, as well as gh-ff-merge, alias it once:
+        gh alias set --shell ff-merge 'gh-ff-merge "$@"'
+    EOS
+  end
+
   test do
     assert_match 'Usage: gh ff-merge', shell_output("#{bin}/gh-ff-merge -h")
   end
