@@ -31,6 +31,7 @@ $ brew install exitor
 $ brew install gem-homepage
 $ brew install gem-publish
 $ brew install gh-ff-merge
+$ brew install gh-push-new-pr
 $ brew install git-autobisect
 $ brew install git-boot
 $ brew install git-checkout-new-issue
@@ -69,6 +70,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/ma
 [gem-homepage](https://github.com/thoran/gem-homepage),
 [gem-publish](https://github.com/thoran/gem-publish),
 [gh-ff-merge](https://github.com/thoran/gh-ff-merge),
+[gh-push-new-pr](https://github.com/thoran/gh-push-new-pr),
 [git-autobisect](https://github.com/thoran/git-autobisect),
 [git-boot](https://github.com/thoran/git-boot),
 [git-checkout-new-issue](https://github.com/thoran/git-checkout-new-issue),
