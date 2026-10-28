@@ -1,12 +1,20 @@
 #!/usr/bin/env ruby
 # uninstall-thorans-homebrew-formulae
 
-# 20260723
-# 0.0.0
+# 20261028
+# 0.1.0
 
-# Description: Uninstall all formulae in thoran/tap.
+# Description: Remove the gh aliases of the gh- formulae in thoran/tap, then uninstall all its formulae.
 
 require 'json'
+
+def tap_directory
+  @tap_directory ||= `brew --repo thoran/tap`.chomp
+end
+
+def uninstall_gh_aliases
+  system(RbConfig.ruby, File.join(tap_directory, 'bin', 'uninstall-thorans-gh-aliases'))
+end
 
 def formulae
   @formulae ||= JSON.parse(`brew tap-info thoran/homebrew-tap --json`)[0]['formula_names']
@@ -26,6 +34,8 @@ def uninstall(formula)
 end
 
 def main
+  uninstall_gh_aliases
+  puts
   formulae.each do |formula|
     if installed?(formula)
       uninstall(formula)

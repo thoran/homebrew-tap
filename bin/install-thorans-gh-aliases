@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+# install-thorans-gh-aliases
+
+# 20261028
+# 0.0.0
+
+# Description: Alias each installed gh- formula in thoran/tap, so that gh-<name> runs as gh <name>.
+
+require 'json'
+require 'yaml'
+
+def formulae
+  @formulae ||= JSON.parse(`brew tap-info thoran/homebrew-tap --json`)[0]['formula_names'].collect{|formula| File.basename(formula)}
+end
+
+def gh_formulae
+  formulae.select{|formula| formula.start_with?('gh-')}
+end
+
+def installed_formulae
+  @installed_formulae ||= `brew list --formula -1`.split("\n")
+end
+
+def installed?(formula)
+  installed_formulae.include?(formula)
+end
+
+def aliases
+  @aliases ||= YAML.safe_load(`gh alias list 2>/dev/null`) || {}
+end
+
+def alias_name(formula)
+  formula.delete_prefix('gh-')
+end
+
+def aliased?(formula)
+  aliases[alias_name(formula)] == "!#{formula} \"$@\""
+end
+
+def taken?(formula)
+  aliases.key?(alias_name(formula))
+end
+
+def set_alias(formula)
+  puts "gh alias set --shell #{alias_name(formula)} '#{formula} \"$@\"'"
+  system('gh', 'alias', 'set', '--shell', alias_name(formula), "#{formula} \"$@\"")
+end
+
+def install_alias(formula)
+  if !installed?(formula)
+    puts "#{formula} is not installed; skipping."
+  elsif aliased?(formula)
+    puts "gh #{alias_name(formula)} is already aliased to #{formula}; skipping."
+  elsif taken?(formula)
+    puts "gh #{alias_name(formula)} is aliased to something else; skipping."
+  else
+    set_alias(formula)
+  end
+end
+
+def main
+  gh_formulae.each{|formula| install_alias(formula)}
+end
+
+main

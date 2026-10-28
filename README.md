@@ -59,6 +59,12 @@ $ brew install weblink
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/master/bin/install-thorans-homebrew-fomulae)"
 ```
 
+This also aliases each gh- formula, so that gh-ff-merge runs as gh ff-merge. To do only that, after installing a gh- formula at a time:
+
+```shell
+$ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
+```
+
 ## Sources
 
 [cases](https://github.com/thoran/cases), 

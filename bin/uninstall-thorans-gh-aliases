@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# uninstall-thorans-gh-aliases
+
+# 20261028
+# 0.0.0
+
+# Description: Remove the gh alias of each gh- formula in thoran/tap, where it still runs that formula.
+
+require 'json'
+require 'yaml'
+
+def gh?
+  system('gh', '--version', out: File::NULL, err: File::NULL)
+end
+
+def formulae
+  @formulae ||= JSON.parse(`brew tap-info thoran/homebrew-tap --json`)[0]['formula_names'].collect{|formula| File.basename(formula)}
+end
+
+def gh_formulae
+  formulae.select{|formula| formula.start_with?('gh-')}
+end
+
+def aliases
+  @aliases ||= YAML.safe_load(`gh alias list 2>/dev/null`) || {}
+end
+
+def alias_name(formula)
+  formula.delete_prefix('gh-')
+end
+
+def aliased?(formula)
+  aliases[alias_name(formula)] == "!#{formula} \"$@\""
+end
+
+def delete_alias(formula)
+  puts "gh alias delete #{alias_name(formula)}"
+  system('gh', 'alias', 'delete', alias_name(formula))
+end
+
+def uninstall_alias(formula)
+  if aliased?(formula)
+    delete_alias(formula)
+  else
+    puts "gh #{alias_name(formula)} is not aliased to #{formula}; skipping."
+  end
+end
+
+def main
+  exit unless gh?
+  gh_formulae.each{|formula| uninstall_alias(formula)}
+end
+
+main
