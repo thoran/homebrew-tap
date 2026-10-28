@@ -9,12 +9,12 @@ thoran's Homebrew tap.
 ### 1. Install Homebrew first if not already installed
 
 ```shell
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### 2. Install this tap
 ```shell
-$ brew tap thoran/tap
+brew tap thoran/tap
 ```
 
 ## Usage
@@ -22,48 +22,48 @@ $ brew tap thoran/tap
 ### 1. Install a formula at a time
 
 ```shell
-$ brew install cases
-$ brew install changelogger
-$ brew install chromedriver-install
-$ brew install ci
-$ brew install dehashrocketify
-$ brew install exitor
-$ brew install gem-announce
-$ brew install gem-homepage
-$ brew install gem-publish
-$ brew install gh-ff-merge
-$ brew install gh-push-new-pr
-$ brew install git-autobisect
-$ brew install git-boot
-$ brew install git-checkout-new-issue
-$ brew install git-ff-merge
-$ brew install git-import-all
-$ brew install git-messages
-$ brew install git-sync-fork
-$ brew install git-tag-version
-$ brew install jira
-$ brew install mercurial
-$ brew install moby
-$ brew install namo
-$ brew install release-audit
-$ brew install revolver
-$ brew install should2expect
-$ brew install skyhooks
-$ brew install startor
-$ brew install tap-audit
-$ brew install weblink
+brew install cases
+brew install changelogger
+brew install chromedriver-install
+brew install ci
+brew install dehashrocketify
+brew install exitor
+brew install gem-announce
+brew install gem-homepage
+brew install gem-publish
+brew install gh-ff-merge
+brew install gh-push-new-pr
+brew install git-autobisect
+brew install git-boot
+brew install git-checkout-new-issue
+brew install git-ff-merge
+brew install git-import-all
+brew install git-messages
+brew install git-sync-fork
+brew install git-tag-version
+brew install jira
+brew install mercurial
+brew install moby
+brew install namo
+brew install release-audit
+brew install revolver
+brew install should2expect
+brew install skyhooks
+brew install startor
+brew install tap-audit
+brew install weblink
 ```
 
 ### 2. Or, install everything at once
 
 ```shell
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/master/bin/install-thorans-homebrew-formulae)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/thoran/homebrew-tap/master/bin/install-thorans-homebrew-formulae)"
 ```
 
 This also aliases each gh- formula, so that gh-ff-merge runs as gh ff-merge. To do only that, after installing a gh- formula at a time:
 
 ```shell
-$ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
+ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 ```
 
 ## Sources
