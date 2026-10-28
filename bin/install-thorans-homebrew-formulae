@@ -2,7 +2,7 @@
 # install-thorans-homebrew-formulae
 
 # 20261028
-# 0.1.0
+# 0.1.1
 
 # Description: Install all formulae in thoran/tap, then alias the gh- ones.
 
@@ -22,6 +22,7 @@ end
 
 def main
   system('brew tap thoran/tap')
+  system('brew update')
   formulae.each do |formula|
     puts '', "brew install #{formula}", ''
     system("brew install #{formula}")
