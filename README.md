@@ -28,6 +28,7 @@ $ brew install chromedriver-install
 $ brew install ci
 $ brew install dehashrocketify
 $ brew install exitor
+$ brew install gem-announce
 $ brew install gem-homepage
 $ brew install gem-publish
 $ brew install gh-ff-merge
@@ -73,6 +74,7 @@ $ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [ci](https://github.com/thoran/ci),
 [dehashrocketify](https://github.com/thoran/dehashrocketify),
 [exitor](https://github.com/thoran/exitor),
+[gem-announce](https://github.com/thoran/gem-announce),
 [gem-homepage](https://github.com/thoran/gem-homepage),
 [gem-publish](https://github.com/thoran/gem-publish),
 [gh-ff-merge](https://github.com/thoran/gh-ff-merge),
