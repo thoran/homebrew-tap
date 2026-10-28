@@ -2,7 +2,7 @@
 # install-thorans-gh-aliases
 
 # 20261028
-# 0.0.0
+# 0.0.1
 
 # Description: Alias each installed gh- formula in thoran/tap, so that gh-<name> runs as gh <name>.
 
@@ -18,11 +18,15 @@ def gh_formulae
 end
 
 def installed_formulae
-  @installed_formulae ||= `brew list --formula -1`.split("\n")
+  @installed_formulae ||= `brew list --full-name --formula`.split("\n")
+end
+
+def full_name(formula)
+  "thoran/tap/#{formula}"
 end
 
 def installed?(formula)
-  installed_formulae.include?(formula)
+  installed_formulae.include?(full_name(formula))
 end
 
 def aliases
