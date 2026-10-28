@@ -2,7 +2,7 @@
 # uninstall-thorans-homebrew-formulae
 
 # 20261028
-# 0.1.0
+# 0.1.1
 
 # Description: Remove the gh aliases of the gh- formulae in thoran/tap, then uninstall all its formulae.
 
@@ -21,11 +21,11 @@ def formulae
 end
 
 def installed_formulae
-  @installed_formulae ||= `brew list --formula -1`.split("\n")
+  @installed_formulae ||= `brew list --full-name --formula`.split("\n")
 end
 
 def installed?(formula)
-  installed_formulae.include?(File.basename(formula))
+  installed_formulae.include?(formula)
 end
 
 def uninstall(formula)
