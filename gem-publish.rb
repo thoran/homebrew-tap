@@ -1,10 +1,10 @@
 class GemPublish < Formula
   desc "A simple Ruby script to build, push, and clean up gems in one step."
   homepage 'https://github.com/thoran/gem-publish'
-  version '0.6.0'
+  version '0.7.0'
   license 'MIT'
 
-  url 'https://github.com/thoran/gem-publish.git', tag: 'v0.6.0', revision: 'fcf0a1d8d2f375366a4f4a207f77e30c0c4da85c'
+  url 'https://github.com/thoran/gem-publish.git', tag: 'v0.7.0', revision: 'a80464e4cb4c5d078e29398ded301918c2f952b0'
 
   depends_on 'ruby'
 
