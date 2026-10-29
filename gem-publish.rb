@@ -1,12 +1,22 @@
 class GemPublish < Formula
-  desc "A simple shell script to build, push, and clean up a gem in one step."
+  desc "A simple Ruby script to build, push, and clean up gems in one step."
   homepage 'https://github.com/thoran/gem-publish'
-  version '0.5.0'
+  version '0.6.0'
   license 'MIT'
 
-  url 'https://github.com/thoran/gem-publish.git', tag: 'v0.5.0', revision: 'c084028224bf8adea3ca11b1ac9b8d954c224f58'
+  url 'https://github.com/thoran/gem-publish.git', tag: 'v0.6.0', revision: '7a4aa7c586f9ca3eab4c54841429c64fcdd90118'
+
+  depends_on 'ruby'
 
   def install
-    bin.install 'bin/gem-publish'
+    libexec.install 'bin'
+
+    # PATH names the ruby it is run with, Homebrew's being keg-only, and so the
+    # gem it pushes with.
+
+    (bin/'gem-publish').write_env_script(
+      libexec/'bin/gem-publish',
+      PATH: "#{Formula['ruby'].opt_bin}:$PATH",
+    )
   end
 end
