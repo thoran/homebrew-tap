@@ -1,19 +1,19 @@
 class GhPushNewPr < Formula
-  desc "Push a branch to origin and open a pull request for it where it has none, as gh push-new-pr."
-  version '0.0.0'
+  desc "Push a branch to origin and open a pull request for it, or bring its open one up to date, as gh push-new-pr."
+  version '0.1.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/gh-push-new-pr'
-  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.0.0', revision: 'eedc08d5fd424f93b8c95330c2dd591ae507bd64'
+  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.1.0', revision: '4eb08fb9b2f2a9f9df3c56beb4f99d1b09340ba1'
 
   depends_on 'gh'
   depends_on 'ruby'
 
   # git.rb and switches.rb are the gems gh-push-new-pr requires; ostruct is
   # switches.rb's own dependency and is named here so that nothing is fetched
-  # during the build.  json is required too and is not here, being a default
-  # gem: it ships with the ruby this depends upon rather than living in the gems
-  # directory, so the GEM_PATH the wrapper sets does not shut it out.
+  # during the build.  json and digest are required too and are not here, being
+  # default gems: they ship with the ruby this depends upon rather than living in
+  # the gems directory, so the GEM_PATH the wrapper sets does not shut them out.
 
   resource 'git.rb' do
     url 'https://rubygems.org/downloads/git.rb-0.15.1.gem'
