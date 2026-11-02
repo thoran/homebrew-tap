@@ -4,7 +4,7 @@ class GhPushNewPr < Formula
   license 'MIT'
 
   homepage 'https://github.com/thoran/gh-push-new-pr'
-  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.1.0', revision: '4eb08fb9b2f2a9f9df3c56beb4f99d1b09340ba1'
+  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.1.0', revision: '7d1a5e1ac3104b3b73824d63eefb06a2821f5c05'
 
   depends_on 'gh'
   depends_on 'ruby'
