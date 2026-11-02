@@ -1,10 +1,10 @@
 class Changelogger < Formula
   desc "Given a directory of numbered revisions, write a cumulative CHANGELOG into each of them."
   homepage 'https://github.com/thoran/changelogger'
-  version '0.23.0'
+  version '0.24.0'
   license 'MIT'
 
-  url 'https://github.com/thoran/changelogger.git'
+  url 'https://github.com/thoran/changelogger.git', tag: 'v0.24.0', revision: 'a709455ef389b93d2f53c477fb770ffd88432aa6'
 
   depends_on 'ruby'
 
