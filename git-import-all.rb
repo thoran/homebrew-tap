@@ -1,10 +1,10 @@
 class GitImportAll < Formula
   desc "Turn a directory of numbered revisions into a git repository, one commit per revision."
   homepage 'https://github.com/thoran/git-import-all'
-  version '0.16.0'
+  version '0.17.0'
   license 'MIT'
 
-  url 'https://github.com/thoran/git-import-all.git'
+  url 'https://github.com/thoran/git-import-all.git', tag: 'v0.17.0', revision: 'ac934c147cfd42541e1c7aff20ac7302aa88b516'
 
   depends_on 'ruby'
 
