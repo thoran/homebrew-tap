@@ -26,8 +26,8 @@ class GhPushNewPr < Formula
   end
 
   resource 'switches.rb' do
-    url 'https://rubygems.org/downloads/switches.rb-0.14.0.gem'
-    sha256 'b6c0fa8c22277fd40c3070864040da75bc48086012d8db8b3fdc88a50c7f312a'
+    url 'https://rubygems.org/downloads/switches.rb-0.14.3.gem'
+    sha256 'ed54fe8d0fd709314623b7f856cd2bca55fbe43c9d0100d4747949afea862d01'
   end
 
   def install
