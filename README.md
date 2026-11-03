@@ -22,6 +22,7 @@ brew tap thoran/tap
 ### 1. Install a formula at a time
 
 ```shell
+brew install brew-cask-check
 brew install cases
 brew install changelogger
 brew install chromedriver-install
@@ -68,6 +69,7 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 
 ## Sources
 
+[brew-cask-check](https://github.com/thoran/brew-cask-check),
 [cases](https://github.com/thoran/cases), 
 [changelogger](https://github.com/thoran/changelogger),
 [chromedriver-install](https://github.com/thoran/chromedriver-install),
