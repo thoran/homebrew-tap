@@ -1,10 +1,10 @@
 class GhPushNewPr < Formula
   desc "Push a branch to origin and open a pull request for it, or bring its open one up to date, as gh push-new-pr."
-  version '0.1.1'
+  version '0.1.2'
   license 'MIT'
 
   homepage 'https://github.com/thoran/gh-push-new-pr'
-  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.1.1', revision: 'f0e25d791d402b8af3e6714de11ee7dce509b2bd'
+  url 'https://github.com/thoran/gh-push-new-pr.git', tag: 'v0.1.2', revision: '81071a124b7a06826e559b8edb50d4de7504c4bb'
 
   depends_on 'gh'
   depends_on 'ruby'
