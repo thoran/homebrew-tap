@@ -1,10 +1,10 @@
 class GemAnnounce < Formula
   desc "Announce an owner's gems to a mailing list."
   homepage 'https://github.com/thoran/gem-announce'
-  version '0.7.1'
+  version '0.7.2'
   license 'MIT'
 
-  url 'https://github.com/thoran/gem-announce.git', tag: 'v0.7.1', revision: '4ccb77b332cc5e14e424fde156330f403fbd8d09'
+  url 'https://github.com/thoran/gem-announce.git', tag: 'v0.7.2', revision: 'eecbe7b89973e6bb3b6fb42faeda0310567deaef'
 
   depends_on 'ruby'
 
