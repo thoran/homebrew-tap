@@ -26,6 +26,7 @@ brew install brew-cask-check
 brew install cases
 brew install changelogger
 brew install chromedriver-install
+brew install chsh-wrapper
 brew install ci
 brew install dehashrocketify
 brew install exitor
@@ -73,6 +74,7 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [cases](https://github.com/thoran/cases), 
 [changelogger](https://github.com/thoran/changelogger),
 [chromedriver-install](https://github.com/thoran/chromedriver-install),
+[chsh-wrapper](https://github.com/thoran/chsh-wrapper),
 [ci](https://github.com/thoran/ci),
 [dehashrocketify](https://github.com/thoran/dehashrocketify),
 [exitor](https://github.com/thoran/exitor),
