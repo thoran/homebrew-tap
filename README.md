@@ -47,6 +47,7 @@ brew install jira
 brew install mercurial
 brew install moby
 brew install namo
+brew install open-wrapper
 brew install release-audit
 brew install revolver
 brew install should2expect
@@ -95,6 +96,7 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [mercurial](https://github.com/thoran/mercurial),
 [moby](https://github.com/thoran/moby),
 [namo](https://github.com/thoran/namo),
+[open-wrapper](https://github.com/thoran/open-wrapper),
 [release-audit](https://github.com/thoran/release-audit),
 [revolver](https://github.com/thoran/revolver),
 [should2expect](https://github.com/thoran/should2expect),
