@@ -1,10 +1,10 @@
 class ChshWrapper < Formula
   desc "Change the login shell, choosing from every copy of every shell installed."
-  version '0.3.1'
+  version '0.3.2'
   license 'MIT'
 
   homepage 'https://github.com/thoran/chsh-wrapper'
-  url 'https://github.com/thoran/chsh-wrapper.git', tag: 'v0.3.1', revision: '356e10ca3679f17c8f76d623f75014af0b2d6173'
+  url 'https://github.com/thoran/chsh-wrapper.git', tag: 'v0.3.2', revision: 'f48c059798689b18c84fc0d00c4703c1a3e210b0'
 
   depends_on 'ruby'
 
