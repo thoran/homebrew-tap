@@ -44,6 +44,7 @@ brew install git-import-all
 brew install git-messages
 brew install git-sync-fork
 brew install git-tag-version
+brew install install_yacy
 brew install jira
 brew install mercurial
 brew install moby
@@ -94,6 +95,7 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [git-messages](https://github.com/thoran/git-messages),
 [git-sync-fork](https://github.com/thoran/git-sync-fork),
 [git-tag-version](https://github.com/thoran/git-tag-version),
+[install_yacy](https://github.com/thoran/install_yacy),
 [jira](https://github.com/thoran/jira),
 [mercurial](https://github.com/thoran/mercurial),
 [moby](https://github.com/thoran/moby),
