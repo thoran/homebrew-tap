@@ -1,15 +1,15 @@
-class InstallYacy < Formula
-  desc "Install YaCy, the peer-to-peer search engine, on macOS or Linux, and start it."
-  version '0.7.0'
+class Yacy < Formula
+  desc "Install, start and stop YaCy, the peer-to-peer search engine, on macOS or Linux, and open its page."
+  version '0.8.0'
   license 'MIT'
 
-  homepage 'https://github.com/thoran/install_yacy'
-  url 'https://github.com/thoran/install_yacy.git', tag: 'v0.7.0', revision: 'a24658dc515014508c02e47524a99d6dd0bbf3dd'
+  homepage 'https://github.com/thoran/yacy'
+  url 'https://github.com/thoran/yacy.git', tag: 'v0.8.0', revision: 'af52149aaf0ef1f1423d55430a9b9ee4530442bd'
 
   depends_on 'ruby'
   depends_on 'xz' => :build
 
-  # nokogiri and switches.rb are the gems install_yacy requires everywhere.
+  # nokogiri and switches.rb are the gems yacy requires everywhere.
   # mini_portile2 and racc come in with nokogiri, mini_portile2 to build its
   # extension, and ostruct with switches.rb, and are named here so that nothing
   # is fetched during the build.
@@ -93,15 +93,15 @@ class InstallYacy < Formula
     # The wrapper execs the script, which is made executable here whatever mode
     # it was committed with.
 
-    chmod 0755, libexec/'bin/install_yacy'
+    chmod 0755, libexec/'bin/yacy'
 
     # The gems are built by the ruby this depends on, and the script's
     # /usr/bin/env ruby would otherwise find whichever ruby comes first on the
     # user's PATH.  nokogiri's extension is built for one and will not load in
     # the other, so the wrapper names the ruby the gems were built against.
 
-    (bin/'install_yacy').write_env_script(
-      libexec/'bin/install_yacy',
+    (bin/'yacy').write_env_script(
+      libexec/'bin/yacy',
       PATH: "#{Formula['ruby'].opt_bin}:$PATH",
       GEM_HOME: libexec/'vendor',
       GEM_PATH: libexec/'vendor',
@@ -110,6 +110,7 @@ class InstallYacy < Formula
   end
 
   test do
-    assert_predicate bin/'install_yacy', :executable?
+    assert_predicate bin/'yacy', :executable?
+    assert_match 'Usage: yacy', shell_output("#{bin}/yacy --help")
   end
 end

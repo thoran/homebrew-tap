@@ -44,7 +44,6 @@ brew install git-import-all
 brew install git-messages
 brew install git-sync-fork
 brew install git-tag-version
-brew install install_yacy
 brew install jira
 brew install mercurial
 brew install moby
@@ -57,6 +56,7 @@ brew install skyhooks
 brew install startor
 brew install tap-audit
 brew install weblink
+brew install yacy
 ```
 
 ### 2. Or, install everything at once
@@ -95,7 +95,6 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [git-messages](https://github.com/thoran/git-messages),
 [git-sync-fork](https://github.com/thoran/git-sync-fork),
 [git-tag-version](https://github.com/thoran/git-tag-version),
-[install_yacy](https://github.com/thoran/install_yacy),
 [jira](https://github.com/thoran/jira),
 [mercurial](https://github.com/thoran/mercurial),
 [moby](https://github.com/thoran/moby),
@@ -107,7 +106,8 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 [skyhooks](https://github.com/thoran/skyhooks),
 [startor](https://github.com/thoran/startor),
 [tap-audit](https://github.com/thoran/tap-audit),
-[weblink](https://github.com/thoran/weblink)
+[weblink](https://github.com/thoran/weblink),
+[yacy](https://github.com/thoran/yacy)
 
 ## Contributing
 
