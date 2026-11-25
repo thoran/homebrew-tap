@@ -22,6 +22,7 @@ brew tap thoran/tap
 ### 1. Install a formula at a time
 
 ```shell
+brew install abn-bulk-extract
 brew install brew-cask-check
 brew install cases
 brew install changelogger
@@ -71,6 +72,7 @@ ruby "$(brew --repo thoran/tap)/bin/install-thorans-gh-aliases"
 
 ## Sources
 
+[abn-bulk-extract](https://github.com/thoran/abn-bulk-extract),
 [brew-cask-check](https://github.com/thoran/brew-cask-check),
 [cases](https://github.com/thoran/cases), 
 [changelogger](https://github.com/thoran/changelogger),
