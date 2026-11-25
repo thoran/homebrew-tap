@@ -1,10 +1,10 @@
 class Yacy < Formula
   desc "Install, start and stop YaCy, the peer-to-peer search engine, on macOS or Linux, and open its page."
-  version '0.8.1'
+  version '0.9.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/yacy'
-  url 'https://github.com/thoran/yacy.git', tag: 'v0.8.1', revision: '14bd3d386f1870a755cc3897050a7328baeb2eb5'
+  url 'https://github.com/thoran/yacy.git', tag: 'v0.9.0', revision: 'a7f7303e51027477014398c2d55e313277463f4d'
 
   depends_on 'ruby'
   depends_on 'xz' => :build
