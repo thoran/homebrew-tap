@@ -1,10 +1,10 @@
 class Yacy < Formula
-  desc "Install, start and stop YaCy, the peer-to-peer search engine, on macOS or Linux, and open its page."
-  version '0.9.0'
+  desc "Install, start, stop and uninstall YaCy, the peer-to-peer search engine, on macOS or Linux, and open its page."
+  version '0.10.0'
   license 'MIT'
 
   homepage 'https://github.com/thoran/yacy'
-  url 'https://github.com/thoran/yacy.git', tag: 'v0.9.0', revision: 'a7f7303e51027477014398c2d55e313277463f4d'
+  url 'https://github.com/thoran/yacy.git', tag: 'v0.10.0', revision: 'bd62115a62a0f778a31f952a1221eed2f14e4c43'
 
   depends_on 'ruby'
   depends_on 'xz' => :build
@@ -107,6 +107,14 @@ class Yacy < Formula
       GEM_PATH: libexec/'vendor',
       RUBYLIB: libexec/'lib',
     )
+  end
+
+  def caveats
+    <<~EOS
+      brew uninstall yacy removes the command, and leaves YaCy. To remove YaCy too, first run:
+        yacy uninstall
+      YaCy's DATA, holding its index, its settings and the peer's identity, is kept unless --data is given.
+    EOS
   end
 
   test do
